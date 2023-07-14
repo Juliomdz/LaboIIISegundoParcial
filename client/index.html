@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./css/index.css" />
+        <script src="./js/index.js" type="module"></script>
+        <title>Crud heroes</title>
+        <link rel="icon" href="./images/iconoHeroes.png" type="image/x-icon">
+    </head>
+    <body>
+        <nav class="navbar bg-dark bg-gradient navbar-expand-md">
+            <div class="container-fluid">
+                <div
+                    class="col-lg-6 col-md-4 col-12 row justify-content-center justify-content-sm-center col-sm-12 justify-content-lg-start"
+                >
+                    <a
+                        href="#"
+                        class="col-4 offset-3 offset-md-1 navbar-brand col-md-4 col-sm-4">
+                        <img
+                            src="./images/headerLogo.png"
+                            alt="logo de heroes"
+                            class="logo"
+                            width="110"
+                            height="70"
+                        />
+                    </a>
+                </div>
+                <div
+                    class="col-md-8 col-lg-6 col-sm-12 row justify-content-center col-12"
+                >
+                    <button
+                        class="navbar-toggler custom-toggler col-sm-3 col-4"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon col-2 navbar-toggler-icon-warning"></span>
+                    </button>
+                    <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-danger bg-gradient rounded-5 shadow-sm collapse navbar-collapse col-lg-6 col-md-8 flex-md-row flex-sm-column flex-lg-row flex-column justify-content-lg-around justify-content-md-around justify-content-sm-evenly justify-content-center container-fluid col-sm-8 collapse navbar-collapse col-12 align-items-center" id="navbarSupportedContent" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+                        <li class="nav-item link" role="presentation">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item link" role="presentation">
+                            <a href="administracion.html" class="nav-link">Personajes</a
+                            >
+                        </li>
+                        <li class="nav-item link" role="presentation">
+                            <a href="#" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item link" role="presentation">
+                            <a href="#" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container-fluid">
+    
+                <main class="container-fluid">
+                    <h1 class="text-capitalize text-center">
+                        Heroes en nuestra Base de Datos
+                    </h1>
+                    <div
+                        id="heroesSection"
+                        class="row justify-content-lg-center mx-2 justify-content-center justify-content-md-center justify-content-sm-evenly"
+                    ></div>
+                    <div class="spinner"></div>
+                </main>
+            </div>
+        </div>
+        <footer class="navbar bg-danger bg-gradient">
+            <div
+                class="container-fluid flex-sm-row flex-column align-content-lg-center justify-content-sm-center justify-content-md-center justify-content-sm-center"
+            >
+                <ul
+                    class="navbar-nav flex-sm-row justify-content-sm-center align-items-center col-12 flex-column col-lg-8 col-md-8"
+                >
+                    <li
+                        class="nav-item col-2 justify-content-center d-flex"
+                    >
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li
+                        class="nav-item col-2 justify-content-center d-flex"
+                    >
+                        <a href="administracion.html" class="nav-link"
+                            >Personajes</a
+                        >
+                    </li>
+                    <li
+                        class="nav-item col-2 justify-content-center d-flex"
+                    >
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li
+                        class="nav-item col-2 justify-content-center d-flex"
+                    >
+                        <a href="#" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <div class="col-8 col-lg-4 d-flex align-items-center col-sm-8 col-md-8 justify-content-center">
+                    <p class=" text-center">
+                        Laboratorio III - Todos los Derechos Reservados
+                        &copy;
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

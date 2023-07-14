@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./css/index.css" />
+        <link
+            rel="stylesheet"
+            href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./js/app.js" type="module"></script>
+        <title>Crud heroes</title>
+        <link rel="icon" href="./images/iconoHeroes.png" type="image/x-icon">
+    </head>
+    <body>
+        <nav class="navbar bg-dark bg-gradient navbar-expand-md">
+            <div class="container-fluid">
+                <div
+                    class="col-lg-6 col-md-4 col-12 row justify-content-center justify-content-sm-center col-sm-12 justify-content-lg-start"
+                >
+                    <a
+                        href="#"
+                        class="col-4 offset-3 offset-md-1 navbar-brand col-md-4 col-sm-4"
+                    >
+                        <img
+                            src="./images/headerLogo.png"
+                            alt="logo de heroe"
+                            class="logo"
+                            width="110"
+                            height="70"
+                        />
+                    </a>
+                </div>
+                <div
+                    class="col-md-8 col-lg-6 col-sm-12 row justify-content-center col-12"
+                >
+                    <button
+                        class="navbar-toggler col-sm-3 col-4"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon col-2 navbar-toggler-icon-warning"></span>
+                    </button>
+                    <ul class="navbar-nav nav-pills nav-fill gap-2 p-1 small bg-danger bg-gradient rounded-5 shadow-sm collapse navbar-collapse col-lg-6 col-md-8 flex-md-row flex-sm-column flex-lg-row flex-column justify-content-lg-around justify-content-md-around justify-content-sm-evenly justify-content-center container-fluid col-sm-8 collapse navbar-collapse col-12 align-items-center" id="navbarSupportedContent" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+                        <li class="nav-item link" role="presentation">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item link" role="presentation">
+                            <a href="administracion.html" class="nav-link">Personajes</a
+                            >
+                        </li>
+                        <li class="nav-item link" role="presentation">
+                            <a href="#" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item link" role="presentation">
+                            <a href="#" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="crud-background">
+            <div class="container-fluid">
+                <main>
+                    <h1 class="text-center text-white">Administracion de Heroes</h1>
+                    <div class="row justify-content-center">
+                        <form class="formulario-alta col-5">
+                            <fieldset
+                                class="form-control bg-dark border-primary bg-gradient"
+                            >
+                                <legend class="text-white">
+                                    Ingrese los datos del superheroe:
+                                </legend>
+                                <div>
+                                    <label
+                                        for="nombre"
+                                        class="form-label text-white"
+                                    >
+                                        Nombre:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        placeholder="Ingrese nombre"
+                                        id="nombre"
+                                        class="form-control"
+                                        aria-labelledby="validacionNombre"
+                                        
+                                    />
+                                    <div
+                                        id="validacionNombre"
+                                        class="form-text text-danger oculto"
+                                    >
+                                        Ingrese el nombre del heroe.
+                                    </div>
+                                </div>
+                                <div>
+                                    <i
+                                        class="fa-solid fa-mask icono text-white"
+                                    ></i>
+                                    <label
+                                        for="alias"
+                                        class="form-label text-white"
+                                    >
+                                        Alias:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        placeholder="Ingrese alter ego"
+                                        id="alias"
+                                        class="form-control"
+                                    />
+                                    <div
+                                        id="validacionAlias"
+                                        class="form-text text-danger oculto"
+                                    >
+                                        Ingrese el alias del heroe.
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="editorial" class="text-white">
+                                        <i class="fa-solid fa-newspaper"></i>
+                                        Editorial:</label
+                                    >
+                                    <div class="d-flex justify-content-evenly">
+                                        <div class="form-check">
+                                            <img
+                                                src="./images/iconoMarvel.png"
+                                                alt=""
+                                                class="img-fluid"
+                                                width="40"
+                                                height="10"
+                                            />
+
+                                            <input
+                                                type="radio"
+                                                value="Marvel"
+                                                name="editorial"
+                                                checked
+                                                class="form-check-input mt-3"
+                                            />
+                                        </div>
+                                        <div class="form-check">
+                                            <img
+                                                src="images/iconoDc.png"
+                                                alt=""
+                                                class="img-fluid"
+                                                width="50"
+                                                height="75"
+                                            />
+                                            <input
+                                                type="radio"
+                                                value="Dc Comics"
+                                                name="editorial"
+                                                class="form-check-input mt-3"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i
+                                        class="fa-solid fa-hand-fist text-white"
+                                    ></i>
+                                    <label
+                                        for="fuerza"
+                                        class="form-label text-white"
+                                    >
+                                        Fuerza:</label
+                                    >
+                                    <input
+                                        type="range"
+                                        id="fuerza"
+                                        min="0"
+                                        max="1000"
+                                        class="form-range"
+                                    />
+                                </div>
+                                <div>
+                                    <i
+                                        class="fa-solid fa-gun icono text-white"
+                                    ></i>
+                                    <label
+                                        for="armadura"
+                                        class="text-white form-label"
+                                        >Arma</label
+                                    >
+                                    <select
+                                        name="arma"
+                                        id="armas"
+                                        class="form-select mb-2"
+                                    ></select>
+                                </div>
+                                <input type="text" hidden value="" />
+                                <button class="btn btn-success btn-sm">
+                                    <i
+                                        class="fa-regular fa-floppy-disk fa-lg"
+                                    ></i>
+                                    Guardar
+                                </button>
+                                <input
+                                    type="button"
+                                    value="Eliminar"
+                                    class="btn btn-danger btn-sm oculto"
+                                    id="btnEliminar"
+                                />
+                                <input
+                                    type="button"
+                                    value="Cancelar"
+                                    class="btn btn-secondary btn-sm oculto"
+                                    id="btnCancelar"
+                                />
+                                <input type="hidden" id="anuncioId" />
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="spinner" id="spinner-container"></div>
+                    <div
+                        class="row justify-content-center mt-2 mx-1 me-4 oculto"
+                        id="filtrosContainer"
+                    >
+                        <div class="col-7 bg-secondary bg-gradient-secondary">
+                            <h2 class="text-center h3">Filtros</h2>
+                            <div
+                                class="row align-items-center mb-2 justify-content-center"
+                            >
+                                <div class="col-12 col-md-6">
+                                    <p class="d-inline">Filtrar por:</p>
+                                    <select
+                                        name="selectFiltros"
+                                        id="selectFiltros"
+                                        class="form-select-sm form-control bg-info w-50"
+                                    >
+                                        <option value="Todos">Todos</option>
+                                        <option value="Dc Comics">
+                                            Dc Comics
+                                        </option>
+                                        <option value="Marvel">Marvel</option>
+                                    </select>
+                                </div>
+                                <div class="d-flex flex-column align-items-start col-12 col-md-6">
+                                    <div class="col-12 col-md-6">
+                                      <p class="d-inline">Fuerza media:</p>
+                                      <input type="text" class="form-control-sm w-25 m-2" disabled id="txtPromedio" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                      <p class="d-inline">Mayor fuerza:</p>
+                                      <input type="text" class="form-control-sm w-25 m-2" disabled id="txtMaximo" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                      <p class="d-inline">Menor fuerza:</p>
+                                      <input type="text" class="form-control-sm w-25 m-2" disabled id="txtMinimo" />
+                                    </div>
+                                  </div>
+                            </div>
+                            <div id="filtrosColumnasContainer"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="container-fluid row justify-content-sm-center mt-2"
+                    >
+                        <div
+                            class="col-12 col-sm-10 col-md-7"
+                            id="table-container"
+                        ></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <footer class="navbar bg-danger bg-gradient">
+            <div
+                class="container-fluid flex-sm-row flex-column align-content-lg-center justify-content-sm-center justify-content-md-center justify-content-sm-center"
+            >
+                <ul
+                    class="navbar-nav flex-sm-row justify-content-sm-center align-items-center col-12 flex-column col-lg-8 col-md-8"
+                >
+                    <li class="nav-item col-2 justify-content-center d-flex">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item col-2 justify-content-center d-flex">
+                        <a href="administracion.html" class="nav-link"
+                            >Personajes</a
+                        >
+                    </li>
+                    <li class="nav-item col-2 justify-content-center d-flex">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item col-2 justify-content-center d-flex">
+                        <a href="#" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <div
+                    class="col-8 col-lg-4 d-flex align-items-center col-sm-8 col-md-8 justify-content-center"
+                >
+                    <p class="text-center">
+                        Laboratorio III - Todos los Derechos Reservados &copy;
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

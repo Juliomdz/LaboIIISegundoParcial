@@ -1,0 +1,60 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "nombre": "Tony Stark",
+      "fuerza": "250",
+      "alias": "Iron Man",
+      "editorial": "Marvel",
+      "arma": "Armadura"
+    },
+    {
+      "id": 2,
+      "nombre": "Peter Parker",
+      "fuerza": "200",
+      "alias": "Spiderman",
+      "editorial": "Marvel",
+      "arma": "Telaraña"
+    },
+    {
+      "id": 3,
+      "nombre": "Bruce Wayne",
+      "fuerza": "250",
+      "alias": "Batman",
+      "editorial": "Dc Comics",
+      "arma": "Baticinturon"
+    },
+    {
+      "id": 4,
+      "nombre": "Kal-L",
+      "fuerza": "350",
+      "alias": "Superman",
+      "editorial": "DC Comics",
+      "arma": "Kriptoniano"
+    },
+    {
+      "id": 5,
+      "nombre": "Barry Allen",
+      "fuerza": "200",
+      "alias": "Flash",
+      "editorial": "DC Comics",
+      "arma": "Velocidad"
+    },
+    {
+      "id": 6,
+      "nombre": "Bruce Banner",
+      "fuerza": "350",
+      "alias": "Hulk",
+      "editorial": "Marvel",
+      "arma": "Transformacion"
+    },
+    {
+      "id": 7,
+      "nombre": "Clint Barton",
+      "fuerza": "376",
+      "alias": "Hawkeye",
+      "editorial": "Marvel",
+      "arma": "Flechas"
+    }
+  ]
+}

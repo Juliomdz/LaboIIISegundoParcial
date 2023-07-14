@@ -1,0 +1,55 @@
+.content {
+    background-image: url("../images/backgroundIndex.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color: blue;
+    min-height: 88vh;
+}
+
+.crud-background {
+    background-image: url("../images/backgroundAdmin.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color: blue;
+    min-height: 100vh;
+}
+
+.link {
+    font-size: 1.5rem;
+}
+
+.spinner {
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: url("../images/spinner.png");
+    animation: spin 1s ease infinite;
+    background-size: contain;
+}
+
+.spinner-oculto {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.visible{
+    visibility: visible;
+}
+
+.oculto{
+    visibility: hidden;
+}
